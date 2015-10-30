@@ -1,0 +1,167 @@
+/**
+ * Stylesheet to provide a more pleasing UI where lots of forms and tabs are present.
+*/
+
+/* Styling for the panel attached to the second level of tabs (i.e. styling for Root.SecondLevel) */
+.ss-tabset > .ui-tabs-panel {
+	background: #e6eaed;
+	border: 1px solid #c0c0c2;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/* Styling for the panel attached to the third level of tabs (i.e. styling for Root.SecondLevel.ThirdLevel) */
+.ss-tabset > .ui-tabs-panel > .ui-tabs-panel {
+	background: none;
+	border: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+	/* Styling for the third level tabs themselves (aka the HTML list) */
+	.ss-tabset > .ui-tabs-panel > .ui-tabs-nav > li {
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	
+		/* Inactive State */
+		.ss-tabset > .ui-tabs-panel > .ui-tabs-nav > li.ui-state-default {
+			background: #ced7dc;
+			border: 1px solid #c0c0c2 !important;
+		}
+	
+		/* Activr State */
+		.ss-tabset > .ui-tabs-panel > .ui-tabs-nav > li.ui-tabs-active {
+			background: #ED145B;
+			border: 1px solid #f27ea4 !important;
+		}
+		
+		/* Styling for the third level tab anchors */
+		.ss-tabset > .ui-tabs-panel > .ui-tabs-nav > li.ui-tabs-active a {
+			color: #fff;
+			text-shadow: none;
+		}
+
+/* HeaderField Styles (Header Level 2 is used on the HTML CompositeField headers) */
+.tab h2 {
+	background: #005B94;
+	padding: 5px 10px;
+	color: #fff;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	margin-bottom: 0px !important;
+	margin-top: 0px !important;
+    font-size: 16.8px;
+    padding-left: 13px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+	/* Prevent the styling from being applied to GridField titles */
+	.ss-gridfield-table .title h2 {
+		background: none;
+		border: 0px;
+	}
+
+	/* Styling for a CompositeField directly after a HeaderField which creates the boxed container effect */
+	.tab h2 + .CompositeField
+	{
+		background: #f0f0f0;
+		height: 100%;
+		border: 1px solid #005B94;
+		border-top: px;
+		-webkit-border-bottom-right-radius: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		margin-bottom: 16px;
+	}
+	
+		/* Styling for individual .field divs within the CompositeField */
+		.tab h2 + .CompositeField .field {
+			padding: 16px 24px 16px 24px;
+			margin: 0px;
+		}
+		
+			/* Styling for ConfirmedPassword Field */
+			.tab h2 + .CompositeField .confirmedpassword {
+				padding: 0px !important;
+			}
+			
+				.tab h2 + .CompositeField .confirmedpassword > .middleColumn {
+					border-bottom: 1px solid #d0d3d5;
+				}
+		
+		/* LiteralField - Wtih Border */
+		.tab h2 + .CompositeField .literal-field {
+			padding: 16px 24px 0px 24px;			
+		}
+		
+		/* LiteralField - No Border */
+		.tab h2 + .CompositeField .literal-field-noborder {
+			padding: 16px 24px 0px 24px;			
+			border-bottom: none;
+		}
+		
+		/* Styling for all LiteralField error, success, warning, info messages */
+		.tab h2 + .CompositeField .literal-field .message {
+			margin-top: 0px;
+			margin-bottom: 16px;
+		
+		/* Styling for a .field div immediatley after a LiteralField */
+		.tab h2 + .CompositeField .literal-field + .field {
+			padding-top: 16px;
+		}
+	
+		/* Styling for SilverStripe FieldGroup */
+		.tab h2 + .CompositeField .literal-field + .fieldgroup {
+			padding-top: 0px;
+			margin-top: 0px;
+		}
+		
+		/* Styling for FieldGroup Fields */
+		.tab h2 + .CompositeField .fieldgroup .fieldgroup-field .fieldholder-small,
+		.tab h2 + .CompositeField .field .fieldgroup .fieldgroup-field.last {
+			padding-bottom: 0px;
+		}
+	
+		/* Styling for Optionset within the CompositeField */
+		.tab h2 + .CompositeField .optionset .optionset li {
+			width: 100%;
+		}
+	
+		/* Styling for Checkboxset within the CompositeField */
+		.tab h2 + .CompositeField .checkboxset .checkboxset li {
+			width: 25%;
+		}
+	
+		/* Styling for message within the CompositeField */
+		.tab h2 + .CompositeField .message {
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+		
+/* GridField Styles */
+.GridFieldSaleOldPrice {
+	text-decoration: line-through;
+}
+
+.GridFieldSaleNewPrice,
+.GridFieldOutofStock {
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.GridFieldLowStock {
+	color: #f0cd06;
+	font-weight: bold;
+}

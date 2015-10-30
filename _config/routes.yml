@@ -1,0 +1,6 @@
+---
+Name: shopmoduleroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
