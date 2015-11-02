@@ -330,12 +330,12 @@ class Customer extends Member {
 		/**
 		 * On /dev/build, create the Customers group - if it doesn't exist yet.
 		 */
-		$count = new SQLQuery("COUNT(*)");
-		$count->setFrom("`group`")->addWhere("(`Title` = 'Customers')");
-		$count = $count->execute()->value(); 
-		if( $count < 1 ) {
+		$exists = Group::get()->filter(array(
+			'Title' => 'Customers',
+		))->exists();
+		if( $exists ) {
 			
-			$n = new Group();
+			$n = Group::create();
 			
 			$n->Title = "Customers";
 			$n->Description = "Security group for store customers";
